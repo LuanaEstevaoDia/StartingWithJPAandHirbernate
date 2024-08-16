@@ -12,12 +12,12 @@ public class Programa {
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("exemplo-jpa");
 		EntityManager em = emf.createEntityManager();
-		/**Forma de remover uma entidade monitorada.Funciona quando ela acaba de ser inserida ou através de busca como o exemplo abaixo.*/
-		Pessoa p = em.find(Pessoa.class, 6);
+		/**busca não precisa do transaction.*/
+		Pessoa p = em.find(Pessoa.class, 2);
 		em.getTransaction().begin();
 		em.remove(p);
 		em.getTransaction().commit();
-		System.out.println("Pessoa de ID 6 removida");
+		System.out.println("Pessoa de ID 2 removida");
 		
 	
 

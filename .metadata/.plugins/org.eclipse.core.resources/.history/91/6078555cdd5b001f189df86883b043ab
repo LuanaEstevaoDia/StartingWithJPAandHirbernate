@@ -17,7 +17,7 @@ public class Programa {
 		em.getTransaction().begin();
 		em.remove(p);
 		em.getTransaction().commit();
-		System.out.println("Pessoa de ID 6 removida");
+		System.out.println("Pessoa de ID 2 removida");
 		
 	
 
